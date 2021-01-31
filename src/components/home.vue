@@ -21,7 +21,7 @@
               <i class="el-icon-location"></i>
               <span>{{ item.authName }}</span>
             </template>
-            <el-menu-item :index="'/'+items.path" v-for="items in menuList[index].children" :key='items.id'  @click="getUsersList">
+            <el-menu-item :index="'/'+items.path" v-for="items in menuList[index].children" :key='items.id'>
                 <template slot="title">
                   <i class="el-icon-location"></i>
                   <span>{{ items.authName }}</span>
@@ -99,9 +99,6 @@ export default {
     },
     getPath (path) {
       window.sessionStorage.setItem('path', path)
-    },
-    getUsersList () {
-      console.log('滴滴滴')
     }
   }
 }
